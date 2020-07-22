@@ -1,0 +1,31 @@
+mybatis:
+  type-aliases-package: com.flazma.starter.dto
+server:
+  port: 8083
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/ 
+      suffix: .jsp
+  datasource:
+    # driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/starter?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: flazma
+    password: 1549
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 100MB
+      max-request-size: 100MB      
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: flazma0@gmail.com 
+    password: walkman1!
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
